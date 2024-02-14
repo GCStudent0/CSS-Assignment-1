@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/*Non-web safe font from google fonts*/
+/*Libre Baskerville Font by Pablo Impallari @ https://fonts.google.com/specimen/Libre+Baskerville*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+
+html {
+    /*Apply box sizing, base font size, line height, and default font*/
+    /* Apply box sizing */
+	box-sizing: border-box;
+
+    /*Default font*/
+    font-family: 'Libre Baskerville', serif;;
+
+    /* Default font size*/
+    font-size: 120%;
+
+    /*Default line height*/
+    line-height: 1.4;
+}
+
+ *, *:before, *:after {
+    box-sizing: inherit;
+    }
+
+body {
+    /*Default background color*/
+    background-color: rgb(20, 44, 65);
+
+    /*Create layout for website using grid*/
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main picture"
+    "main aside"
+    "article article"
+    "footer footer";
+
+    /*Set row/column size of grid layout*/
+    grid-template-rows: auto 24vw;
+    grid-template-columns: auto 26vw;
+   
+    /* Create space around page */
+    margin: auto 15px;
+
+}
+
+/*If screen is below 930px adjust grid layout and size*/
+@media screen and (max-width: 930px){
+    body{
+    grid-template-areas: 
+    "picture picture"
+    "header header"
+    "main main"
+    "main main"
+    "aside aside"
+    "article article"
+    "footer footer";
+
+    grid-template-rows: 50vw auto;
+    grid-template-columns: 50vw auto;
+    }
+}
+
+header {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    grid-area: header;
+    background-color: rgba(120, 188, 248);
+    box-shadow: 0 3px 5px 0 black;
+    margin: 10px 10px;
+    text-align: center;
+    text-shadow: 0px 1px 0px rgb(255, 255, 255);
+}
+
+
+main{
+    grid-area: main;
+    background-color: rgb(120, 188, 248);
+    box-shadow: 0 3px 5px 0 black;
+    margin: 10px 10px;
+    text-align: center;
+    font-size: large;
+}
+
+picture{
+    grid-area: picture;
+
+    text-align: center;
+    color: rgba(0, 0, 0, 0);
+    
+    
+    background-color: rgba(120, 188, 248);
+    box-shadow: 0 3px 5px 0 black;
+    margin: 10px 10px;
+    
+    background-image: url(R-4403851-1363980230-1754.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+}
+
+aside{
+    grid-area: aside;
+    background-color: rgb(120, 188, 248);
+    box-shadow: 0 3px 5px 0 black;
+    margin: 10px 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: medium;
+}
+
+article{
+    grid-area: article;
+    background-color: rgb(120, 188, 248);
+    box-shadow: 0 3px 5px 0 black;
+    margin: 10px 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: medium;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(120, 188, 248);
+    box-shadow: 0 3px 5px 0 black;
+    margin: 10px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-size:small;
+}
+
+h2,h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1;
+}
+
