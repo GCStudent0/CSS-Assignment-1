@@ -53,9 +53,9 @@
     </main>
     
     <!--Place to position image on grid-->
-    <picture>
+    <figure>
         <p>error</p>
-    </picture>
+    </figure>
 
     <!--Aside about what song means to me-->
     <aside>
@@ -66,6 +66,7 @@
         <p>On May 1st, 2023 Gordon Lightfoot passed away at the age of 84.</p>
         <p>Rest in peace Gordon Lightfoot.</p>
     </aside>
+
     <!--Article giving details about Gordon Lightfoot-->
     <article>
         <h3>What Song Means to Me:</h3>
@@ -74,6 +75,7 @@
         <p>Admittedly I didn't really understand the lyrics of Rainy Day People when I was a kid. But I always found the song calming.</p>
         <p>Today I understand the lyrics and can appreciate the song a lot more than I used too. </p>
     </article>
+    
     <!--Footer for references-->
     <footer>
         <h3>References:</h3>
