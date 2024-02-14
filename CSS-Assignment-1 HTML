@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Assignment 1 - CSS Rockstar</title>
+    <!--Use normalize.css on page-->
+    <link rel="stylesheet" href="normalize.css">
+    <!--CSS styling done by me-->
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+        <!--Song title and artist name-->
+        <h1> Rainy Day People by Gordon Lightfoot</h1>
+    </header>
+
+    <!--Lyrics of first verse-->
+    <main>
+        <section>
+            <h2>Verse 1</h2>
+            <p>Rainy day people always seem to know when it's time to call</p>
+            <p>Rainy day people don't talk, they just listen till they've heard it all</p>
+            <p>Rainy day lovers don't lie when they tell you they've been down like you</p>
+            <p>Rainy day people don't mind if you cry on a tear or two</p>
+        </section>
+
+        <!--Lyrics of second verse-->
+        <section>
+            <h2>Verse 2</h2>
+            <p>If you get lonely, all you really need is that rainy day lovers</p>
+            <p>Rainy day people all know there's no sorrow they can't rise above</p>
+            <p>Rainy day lovers don't love any others, that would not be kind</p>
+            <p>Rainy day people all know how it hangs on your peace of mind</p>
+        </section>
+
+        <!--Lyrics of third verse-->
+        <section>
+            <h2>Verse 3</h2>
+            <p>Rainy day lovers don't lie when they tell you they've been down there, too</p>
+            <p>Rainy day people don't mind if you cry on a tear or two</p>
+        </section>
+
+        <!--Lyrics of fourth verse-->
+        <section>
+            <h2>Verse 4</h2>
+            <p>Rainy day people always seem to know when you're feeling blue</p>
+            <p>High stepping strutters who land in the gutter sometime need one, too</p>
+            <p>Take it or leave it or try to believe it, if you've been down too long</p>
+            <p>Rainy day lovers don't hide love inside, they just pass it on</p>
+            <p>Rainy day lovers don't hide love inside, they just pass it on</p>
+        </section>
+    </main>
+    
+    <!--Place to position image on grid-->
+    <picture>
+        <p>error</p>
+    </picture>
+
+    <!--Aside about what song means to me-->
+    <aside>
+        <h3>Who is Gordon Lightfoot?</h3>
+        <p>Gordon Lightfoot was considered one of Canada's greatest singer/songwriters.</p>
+        <p>He composed many hits including The Canadian Railroad Trilogy and The Edmund Fitzgerald.</p>
+        <p>Gordon Lightfoot was noted for achieving international recognition writing songs about Canada.</p>
+        <p>On May 1st, 2023 Gordon Lightfoot passed away at the age of 84.</p>
+        <p>Rest in peace Gordon Lightfoot.</p>
+    </aside>
+    <!--Article giving details about Gordon Lightfoot-->
+    <article>
+        <h3>What Song Means to Me:</h3>
+        <p>My family has always enjoyed Gordon Lightfoots music.</p>  
+        <p>Of the many songs we listen to this one has always been my favorite.</p>
+        <p>Admittedly I didn't really understand the lyrics of Rainy Day People when I was a kid. But I always found the song calming.</p>
+        <p>Today I understand the lyrics and can appreciate the song a lot more than I used too. </p>
+    </article>
+    <!--Footer for references-->
+    <footer>
+        <h3>References:</h3>
+        <p>Lightfoot, G (1975). Rainy Day People. Cold on the Shoulder. Reprise Records.</p>
+        <p>Reprise Record (1975). Cold on the Shoulder Album Art.</p>
+        <p>Noakes,S. (2023). Canadian folk music icon Gordon Lightfoot dead at 84. CBC News. https://www.cbc.ca/news/entertainment/gordon-lightfoot-dead-1.6828991</p>
+        <p>Libre Baskerville Font by Pablo Impallari</p>
+        <h3>Resources referenced:</h3>
+        <p>https://www.w3docs.com/snippets/css/how-to-create-a-responsive-layout-with-grid.html</p>
+        <p>https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids</p>
+        <p>https://www.w3schools.com/css/css3_images.asp</p>
+    </footer>
+</body>
+</html>
