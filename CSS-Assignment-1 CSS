@@ -1,9 +1,7 @@
-@charset "UTF-8";
-
-/*Non-web safe font from google fonts*/
-/*Libre Baskerville Font by Pablo Impallari @ https://fonts.google.com/specimen/Libre+Baskerville*/
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-
+/* Jason Hunt */
+/* 200567508 */
+/* CSS Final Project */
+/* Apr 4th, 2024 */
 
 html {
     /*Apply box sizing, base font size, line height, and default font*/
@@ -11,148 +9,421 @@ html {
 	box-sizing: border-box;
 
     /*Default font*/
-    font-family: 'Libre Baskerville', serif;;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
     /* Default font size*/
     font-size: 120%;
 
     /*Default line height*/
     line-height: 1.4;
+
+    /* Apply smooth scrolling */
+    scroll-behavior: smooth;
 }
 
- *, *:before, *:after {
+/* Apply box sizing */
+*, *:before, *:after {
     box-sizing: inherit;
     }
 
-body {
-    /*Default background color*/
-    background-color: rgb(20, 44, 65);
+/* Font for all headers */
+h1,h2,h3,h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-    /*Create layout for website using grid*/
+/* Apply base styling to body and set up grid*/
+body{
+    margin: auto 3vw;
+    /* Background color in case image fails. */
+    background-color: pink;
+    
+    /* Wonderful background image found here https://www.vecteezy.com/vector-art/957764-seamless-watermelon-pattern */
+    background-image: url(seamless-watermelon-pattern-vector-754240117.jpg);
+    background-size: 60vw;
+
+    /*********** Control grid areas ***************/
     display: grid;
-    grid-template-areas: 
-    "header header"
-    "main picture"
-    "main aside"
-    "article article"
-    "footer footer";
-
-    /*Set row/column size of grid layout*/
-    grid-template-rows: auto 24vw;
-    grid-template-columns: auto 26vw;
-   
-    /* Create space around page */
-    margin: auto 15px;
-
+    gap: 1vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header       header"
+    "nav          nav"
+    "main         main"
+    "main         main"
+    "asideProfile asideStyles"
+    "footer       footer"
+    "skipLink     skipLink";
 }
 
-/*If screen is below 930px adjust grid layout and size*/
-@media screen and (max-width: 930px){
-    body{
-    grid-template-areas: 
-    "picture picture"
-    "header header"
-    "main main"
-    "main main"
-    "aside aside"
-    "article article"
-    "footer footer";
-
-    grid-template-rows: 50vw auto;
-    grid-template-columns: 50vw auto;
-    }
-}
-
-/*Set header to grid-area header and apply styling*/
-header {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+/********* CSS for Header area *************/
+/* Set header as grid area header, adjust positioning, align text, adjust font size, apply styling */
+header{
     grid-area: header;
 
-    background-color: rgba(120, 188, 248);
-    box-shadow: 0 3px 5px 0 black;
-    margin: 10px 10px;
+    margin-top: 1vw;
+    padding: 1vw;
 
     text-align: center;
-    text-shadow: 0px 1px 0px rgb(255, 255, 255);
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
 }
 
-/*Set main to grid-area main and apply styling*/
+/* Adjust size and position of h1*/
+header h1{
+    margin-top: -0.5vw;
+    font-size: 40px;
+}
+
+/* Adjust position of h2 */
+header h2{
+    margin-top: -2vw;
+}
+/* Style header links */
+header a{
+    color: papayawhip;
+    background-color: green;
+    padding: 0.2vw;
+}
+/* Show interactivity to user by changing header link color to black when hover over */
+header a:hover, header a:active{
+    color: black
+}
+
+/************ CSS for Nav area ************/
+/* Set nav as grid area nav, adjust positioning and style. */
+nav{
+    grid-area: nav;
+
+    margin-top: 1vw;
+    padding: 1vw;
+
+    justify-content: center;
+
+    background-color: #f04951e1;
+
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
+}
+
+/* Put list into flexbox and make list icons UTF-8 watermelon icon */
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    list-style-type: "\1F349";
+}
+
+nav ul li{
+    background-color: green;
+}
+/* Style links in list. */
+nav ul a{
+    color:papayawhip;
+    padding: 0.4vw;
+    
+}
+
+/* Show interactivity to user by changing header link color to black when hover/active */
+nav a:hover, nav a:active{
+    color: black;
+}
+
+/************ CSS for main area ************/
+/* Make main grid area main, adjust positioning, align text and style*/
 main{
     grid-area: main;
 
-    background-color: rgb(120, 188, 248);
-    box-shadow: 0 3px 5px 0 black;
-    margin: 10px 10px;
-    
-    text-align: center;
-    /*Make text in main larger than others to better establish visual hierarchy*/
-    font-size: large;
-}
-
-/*Set figure to grid-area figure, import image, apply styling*/
-figure{
-    grid-area: picture;
+    margin-top: 1vw;
+    padding: 1vw;
 
     text-align: center;
-    /*Set text to no color since this only needs to be a container for css to set image*/
-    color: rgba(0, 0, 0, 0);
-    
-    
-    background-color: rgba(120, 188, 248);
-    box-shadow: 0 3px 5px 0 black;
-    margin: 10px 10px;
-    
-    background-image: url(R-4403851-1363980230-1754.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
 }
 
-/*Set aside to grid-area aside and apply styling*/
-aside{
-    grid-area: aside;
+/* Adjust bottom margin of h1 and h3 in main */
+main h2,h3{
+    margin-bottom: -0.9vw;
+}
+/* Adjust top margin of h2*/
+main h2{
+    margin-top: -0.1vw;
+    
+}
+/* Adjust position of #files */
+#files h3{
+    margin-top: -0.1vw;
+    margin-bottom: 1vw;
+}
 
-    background-color: rgb(120, 188, 248);
-    box-shadow: 0 3px 5px 0 black;
-    margin: 10px 10px;
-    padding: 10px;
+/* Style list in main and put in flexbox */
+main section ul{
+    border: solid green;
+    border-radius: 1vw;
+    border-width: 5px;
+    padding: 1vw;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4vw;
+
+    /* List icons to UTF-8 watermelon icon */
+    list-style-position: inside;
+    list-style-type: "\1F349";
+}
+/* Style list elements */
+main ul li{
+    color: papayawhip;
+    background-color: green;
+    padding:0.4vw;
+}
+/* Style links in main */
+main a{
+    color: papayawhip;
+    background-color: green;
+    padding:0.2vw;
+}
+/* Align list to left and increase line height for readable. */
+main ol li{
+    text-align:left;
+    line-height: 2;
+}
+/* Show interactivity to user by changing header link color to black when hover/active */
+main a:hover, main a:active{
+    color: black;
+}
+
+/************* CSS for aside class = profile area ************/
+/* Make .profile aside grid area asideProfile, adjust positioning and add styling */
+.profile{
+    grid-area: asideProfile;
+
+    margin-top: 1vw;
+    padding: 1vw;
 
     text-align: center;
-    font-size: medium;
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
 }
 
-/*Set article to grid-area article and apply styling*/
-article{
-    grid-area: article;
+.profile h4{
+    /* Make h4 text larger */
+    font-size: 30px;
+}
 
-    background-color: rgb(120, 188, 248);
-    box-shadow: 0 3px 5px 0 black;
-    margin: 10px 10px;
-    padding: 10px;
+.profile ul{
+    /* Put ul in flex box */
+    padding: 1vw;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+
+    /* List icons to UTF-8 watermelon icon  */
+    list-style-type: "\1F349";
+    list-style-position: inside;
+}
+
+/* Style list elements */
+.profile ul li{
+    color: papayawhip;
+    background-color: green;
+    padding:0.4vw;
+}
+
+
+/* Style links in list. */
+.profile a{
+    color: papayawhip;
+}
+
+/* Show user interactivity by changing link colors when hover/active */
+.profile a:hover, main a:active{
+    color: black;
+}
+
+/************* CSS for aside id=styles area ****************/
+/* Make #styles grid area asideStyles, adjust positioning, align text and style. */
+#styles{
+    grid-area: asideStyles;
+
+    margin-top: 1vw;
+    padding: 1vw;
 
     text-align: center;
-    font-size: medium;
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
+}
+/* Put ul in flexbox */
+#styles ul{
+    padding: 1vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+    /* List icons to UTF-8 watermelon icon  */
+    list-style-type: "\1F349";
+    list-style-position: inside;
+}
+/* Style list elements */
+#styles ul li{
+    color: papayawhip;
+    background-color: green;
+    padding:0.4vw;
 }
 
-/*Set footer to grid-area footer and apply styling*/
+
+/* Style links in list. */
+#styles a{
+    color: papayawhip;
+}
+/* Show user interactivity by changing link colors when hover/active */
+#styles a:hover, main a:active{
+    color: black;
+}
+
+/*************** CSS for footer area ********************/
+/* Make footer grid area footer, adjust positioning, align text and style */
 footer{
     grid-area: footer;
 
-    background-color: rgb(120, 188, 248);
-    box-shadow: 0 3px 5px 0 black;
-    margin: 10px 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-top: 1vw;
+    padding: 1vw;
 
-    font-size:small;
+    text-align: center;
+
+    background-color: #f04951e1;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
+}
+/* Put ul in flexbox */
+footer ul{
+    padding: 1vw;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5vw;
+
+    /* List icons to UTF-8 watermelon icon  */
+    list-style-type: "\1F349";
+    list-style-position: inside;
+}
+/* Style list elements */
+footer ul li{
+    color: papayawhip;
+    background-color: green;
+    padding:0.4vw;
 }
 
-/*Change default font of headers to more appropriate font.*/
-/*Adjust line height of h2 and h3 header to make them closer to their respective text*/
-h2,h3{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 1;
+
+/* Style links in list. */
+footer a{
+    color: papayawhip;
+    background-color: green;
+    padding:0.2vw;
+}
+/* Show user interactivity by changing link colors when hover/active */
+footer a:hover, main a:active{
+    color: black;
 }
 
+/******* CSS for skip to main content  **********/
+/* Make .skip-link grid area skipLink, adjust positioning, align text */
+.skip-link{
+    grid-area: skipLink;
+
+    color: papayawhip;
+    background-color: #f04951e1;
+    padding:0.2vw;
+    border-style:solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 5vw;
+    
+    text-align: center;
+}
+/* Show user interactivity by changing link colors when hover/active */
+.skip-link:hover, .skip-link:active{
+    color: black;
+}
+
+
+/*********** CSS to edit star images area ************/
+/* Searched Stephanie Eckles style stage to find where star was in html and how to manipulate it.*/
+svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+/* Media Query to adjust page when below 1060 width */
+/* Adjust grid layout */
+@media screen and (max-width: 720px){
+    
+    body{
+    /* Adjust grid layout */
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "asideProfile"
+    "asideStyles"
+    "footer"
+    "skipLink";
+    }
+
+    /* Adjust gap in flexboxes */
+    nav ul{
+        gap: 7vw;
+    }
+    .profile ul{
+        gap: 7vw;
+    }
+    #styles ul{
+        gap: 7vw;
+    }
+    footer ul{
+        gap: 7vw;
+    }
+
+}
+  /************ References and Referenced Work ****************/
+  /* https://stylestage.dev/styles/css/main-stage.css */
+  /* https://www.vecteezy.com/vector-art/957764-seamless-watermelon-pattern */
+  /* https://www.utf8icons.com/character/127817/watermelon */
+  /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
