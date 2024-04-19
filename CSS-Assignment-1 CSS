@@ -422,8 +422,16 @@ svg {
     }
 
 }
-  /************ References and Referenced Work ****************/
-  /* https://stylestage.dev/styles/css/main-stage.css */
+
+/*************** Image used for background of page ********************/
   /* https://www.vecteezy.com/vector-art/957764-seamless-watermelon-pattern */
+
+/*************** References Used ****************/
+  /* https://stylestage.dev/styles/css/main-stage.css */
   /* https://www.utf8icons.com/character/127817/watermelon */
+
+/*************** References for Adapted Work  ***************/
   /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+  /* https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries */
+  /* https://www.w3schools.com/CSS/css_list.asp */
